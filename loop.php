@@ -23,7 +23,7 @@
       <?php the_title(); ?>
     </a>
   </h2>
-  <h3><?php the_date('j F, Y'); ?></h3>
+  <h3><?php echo get_the_date(); ?></h3>
 
   <section class="entry-content">
     <?php the_excerpt(); ?>
