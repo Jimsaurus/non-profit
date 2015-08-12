@@ -1,6 +1,11 @@
 html{
 	font-size:10px;
 }
+
+body {
+	color: #333;
+}
+
 /* headers */
 h2{
 	font-size:2rem;
@@ -29,46 +34,6 @@ p {
 	font-size:1.3rem;
 }
 
-/*blockquotes*/
-
-blockquote {
-	background: #F7F7F7;
-	margin: 0;
-	padding: 20px;
-	p {
-		margin-top: 0;
-	}
-}
-
-/*tables*/
-
-table {
-	td {
-		padding: 10px;
-	}
-	tr td:first {
-		padding-right: 0;
-	}
-}
-
-/*def lists*/
-
-dt {
-	font-weight: 600;
-	padding-bottom: 5px;
-}
-
-dd {
-	padding: 10px;
-	margin-left: 10px;
-}
-
-/*lists*/
-
-ul li, ol li {
-	padding: 3px;
-}
-
 /*PRE*/
 
 pre {
@@ -76,39 +41,4 @@ pre {
 	padding: 10px;
 	border-radius: 4px;
 	border: 1px solid #ccc;
-}
-
-
-/*
-====================================
-Global Classes / Wordpress Specific
-====================================
-*/
-
-.aligncenter {
-	text-align: center;
-	margin: 0 auto;
-}
-
-.alignleft {
-	float: left;
-}
-
-.alignright {
-	float: right;
-}
-
-img {
-	&.alignleft {
-		padding-right: 5px;
-	}
-	&.alignright {
-		padding-left: 5px;
-	}
-}
-
-.clear {
-	width: 100%;
-	float: left;
-	clear: both;
 }
