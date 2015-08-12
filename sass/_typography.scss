@@ -1,8 +1,18 @@
+html{
+	font-size:10px;
+}
 /* headers */
 h2{
-	font-size:1.5rem;
+	font-size:2rem;
 	font-weight:200;
 }
+
+  h3{
+    color: #AEB3C6;
+    font-size: 1.3rem;
+    font-weight:100;
+  }
+
 /* links */
 a {
 	color: $primary-gray;
@@ -16,7 +26,7 @@ a {
 
 p {
 	line-height: 1.5;
-	font-size:1rem;
+	font-size:1.3rem;
 }
 
 /*blockquotes*/
