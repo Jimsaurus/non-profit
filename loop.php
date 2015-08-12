@@ -37,7 +37,7 @@
   <?php comments_template( '', true ); ?>
 
 
-<?php endwhile; // End the loop. Whew. ?>
+<?php endwhile; // End the loop.?>
 
 <?php // Display navigation to next/previous pages when applicable ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
