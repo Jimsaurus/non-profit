@@ -16,33 +16,28 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title">
-        <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
-          <?php the_title(); ?>
-        </a>
-      </h2>
+  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <div class="post-image"><?php the_post_thumbnail("medium"); ?></div>
+   <h2 class="entry-title">
+    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
+      <?php the_title(); ?>
+    </a>
+  </h2>
+  <h3><?php the_date('j F, Y'); ?></h3>
 
-			<section class="entry-content">
-				<?php the_content('Continue reading <span class="meta-nav">&rarr;</span>'); ?>
-				<?php wp_link_pages( array(
-          'before' => '<div class="page-link"> Pages:',
-          'after' => '</div>'
-        )); ?>
-			</section><!-- .entry-content -->
+  <section class="entry-content">
+    <?php the_excerpt(); ?>
+    <?php wp_link_pages( array(
+      'before' => '<div class="page-link"> Pages:',
+      'after' => '</div>'
+      )); ?>
+    </section><!-- .entry-content -->
+  </article><!-- #post-## -->
 
-			<footer>
-				<p><?php the_tags('Tags: ', ', ', '<br>'); ?> Posted in <?php the_category(', '); ?></p>
-        <p><?php comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p>
-        <p><?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p>
-			</footer>
-
-		</article><!-- #post-## -->
-
-		<?php comments_template( '', true ); ?>
+  <?php comments_template( '', true ); ?>
 
 
-<?php endwhile; // End the loop. Whew. ?>
+<?php endwhile; // End the loop.?>
 
 <?php // Display navigation to next/previous pages when applicable ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>

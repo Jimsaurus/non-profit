@@ -1,0 +1,15 @@
+.blog{
+  .content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:0;
+    width:100%;
+  }
+
+  .post{
+    width: 40%;
+    color: $primary-gray;
+  }
+
+}
