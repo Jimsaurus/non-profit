@@ -8,9 +8,11 @@
 */
 
 @import 'normalize';
+@import 'variables';
 @import 'typography';
 @import 'navigation';
 @import 'sidebar';
+@import 'blog';
 @import 'comments';
 @import 'footer';
 /*
@@ -30,12 +32,6 @@ body {
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
-}
-
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
 }
 
 .full {
