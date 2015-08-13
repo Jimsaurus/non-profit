@@ -17,30 +17,34 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="post-image"><?php the_post_thumbnail("medium"); ?></div>
-   <h2 class="entry-title">
-    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
-      <?php the_title(); ?>
-    </a>
-  </h2>
-  <h3><?php echo get_the_date(); ?></h3>
+    <div class="post-image">
+      <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
+        <?php the_post_thumbnail("medium"); ?>
+      </a>
+    </div>
+    <h2 class="entry-title">
+      <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
+        <?php the_title(); ?>
+      </a>
+    </h2>
+    <h3><?php echo get_the_date(); ?></h3>
 
-  <section class="entry-content">
-    <?php the_excerpt(); ?>
-    <?php wp_link_pages( array(
-      'before' => '<div class="page-link"> Pages:',
-      'after' => '</div>'
-      )); ?>
-    </section><!-- .entry-content -->
-  </article><!-- #post-## -->
+    <section class="entry-content">
+      <?php the_excerpt(); ?>
+      <?php wp_link_pages( array(
+        'before' => '<div class="page-link"> Pages:',
+        'after' => '</div>'
+        )); ?>
+      </section><!-- .entry-content -->
+    </article><!-- #post-## -->
 
-  <?php comments_template( '', true ); ?>
+    <?php comments_template( '', true ); ?>
 
 
-<?php endwhile; // End the loop.?>
+  <?php endwhile; // End the loop.?>
 
-<?php // Display navigation to next/previous pages when applicable ?>
-<?php if (  $wp_query->max_num_pages > 1 ) : ?>
-  <p class="alignleft"><?php next_posts_link('&laquo; Older Entries'); ?></p>
-  <p class="alignright"><?php previous_posts_link('Newer Entries &raquo;'); ?></p>
-<?php endif; ?>
+  <?php // Display navigation to next/previous pages when applicable ?>
+  <?php if (  $wp_query->max_num_pages > 1 ) : ?>
+    <p class="alignleft"><?php next_posts_link('&laquo; Older Entries'); ?></p>
+    <p class="alignright"><?php previous_posts_link('Newer Entries &raquo;'); ?></p>
+  <?php endif; ?>
