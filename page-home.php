@@ -129,7 +129,38 @@ DONATE
 		</div><!--donate-wrapper-->
 	</section><!--donate-->
 
+<!-- =============================================
+team
+==================================================-->
+	<section class="team">
+		<div class="team-wrapper">
+			<h4><?php echo $team_title; ?></h4>
+			<p class="lead"><?php echo $team_tagline; ?></p>
+			<p class='about-text'><?php echo $team_text; ?></p>
+			<div class="team-member-wrapper">
 
+				<div class="team-member">
+					<div class="member-image">
+						<div class="member-face">
+							<img src="" alt="">
+						</div><!--member-face-->
+						<div class="member-social">
+							<span><i class="fa fa-twitter"></i></span>
+							<span><i class="fa fa-twitter"></i></span>
+							<span><i class="fa fa-twitter"></i></span>
+						</div><!--member-social-->
+						
+					</div><!-- member-image-->
+					<div class="member-name">
+						
+					</div><!--member-name-->
+				</div><!--team-member-->
+			</div><!--team-member-wrapper-->
+
+			
+
+		</div><!--team-wrapper-->
+	</section><!--team-->
 
 
 
