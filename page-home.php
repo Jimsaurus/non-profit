@@ -37,6 +37,13 @@
 	$value_8 = get_post_meta(6, 'value_8', true);
 	$value_8_text = get_post_meta(6, 'value_8_text', true);
 
+	//DONATE
+	$donate_title = get_post_meta(6, 'donate_title', true);
+	$donate_tagline = get_post_meta(6, 'donate_tagline', true);
+	$donate_text = get_post_meta(6, 'donate_text', true);
+
+
+
 //get the header
 get_header();  ?>
 <main class="home-wrapper">
@@ -48,6 +55,7 @@ HERO
 		<div class="hero-wrapper">
 			<h2><?php echo $hero_title; ?></h2>
 			<h3><?php echo $hero_tagline; ?></h3>
+			<span class="hero-button">DONATE NOW</span>
 			<a href=""><i class="fa fa-angle-double-down"></i></a>
 		</div><!-- hero-wrapper-->
 	</section><!--hero-->
@@ -112,6 +120,10 @@ DONATE
 ==================================================-->
 	<section class="donate">
 		<div class="donate-wrapper">
+			<h4><?php echo $donate_title; ?></h4>
+			<p class="lead"><?php echo $donate_tagline; ?></p>
+			<p class='about-text'><?php echo $donate_text; ?></p>
+			<span class="hero-button">HELP TODAY</span>
 			
 
 		</div><!--donate-wrapper-->
