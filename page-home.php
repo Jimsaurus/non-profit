@@ -18,6 +18,7 @@ HERO
 	<section class="hero">
 		<h1><?php echo $hero_title; ?></h1>
 		<h2><?php echo $hero_tagline; ?></h2>
+		<i class="fa fa-angle-double-down"></i>
 
 	</section>
 </main><!--home-wrapper-->
