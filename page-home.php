@@ -3,16 +3,18 @@
 /*
 	Template Name: Home Page
 */
-
+// ========================================================
 //Custom Fields
-	//HERO
+// ========================================================
+
+	//HERO ===================================================
 	$hero_title = get_post_meta(6, 'hero_title', true);
 	$hero_tagline = get_post_meta(6, 'hero_tagline', true);
-	//ABOUT
+	//ABOUT ===================================================
 	$about_title = get_post_meta(6, 'about_title', true);
 	$about_tagline = get_post_meta(6, 'about_tagline', true);
 	$about_text = get_post_meta(6, 'about_text', true);
-	//VALUES
+	//VALUES ===================================================
 	$value_1 = get_post_meta(6, 'value_1', true);
 	$value_1_text = get_post_meta(6, 'value_1_text', true);
 
@@ -37,12 +39,45 @@
 	$value_8 = get_post_meta(6, 'value_8', true);
 	$value_8_text = get_post_meta(6, 'value_8_text', true);
 
-	//DONATE
+	//DONATE ===================================================
 	$donate_title = get_post_meta(6, 'donate_title', true);
 	$donate_tagline = get_post_meta(6, 'donate_tagline', true);
 	$donate_text = get_post_meta(6, 'donate_text', true);
 
+	//TEAM ===================================================
+	$team_title = get_post_meta(6, 'team_title', true);
+	$team_tagline = get_post_meta(6, 'team_tagline', true);
+		//MEMBERS
+		$member_1_name = get_post_meta(6, 'member_1_name', true);
+		$member_1_job = get_post_meta(6, 'member_1_job', true);
+		$member_1_image = get_post_meta(6, 'member_1_image', true);
+		$member_1_facebook = get_post_meta(6, 'member_1_facebook', true);
+		$member_1_twitter = get_post_meta(6, 'member_1_twitter', true);
+		$member_1_flickr = get_post_meta(6, 'member_1_flickr', true);
 
+		$member_2_name = get_post_meta(6, 'member_2_name', true);
+		$member_2_job = get_post_meta(6, 'member_2_job', true);
+		$member_2_image = get_post_meta(6, 'member_2_image', true);
+		$member_2_facebook = get_post_meta(6, 'member_2_facebook', true);
+		$member_2_twitter = get_post_meta(6, 'member_2_twitter', true);
+		$member_2_flickr = get_post_meta(6, 'member_2_flickr', true);
+
+		$member_3_name = get_post_meta(6, 'member_3_name', true);
+		$member_3_job = get_post_meta(6, 'member_3_job', true);
+		$member_3_image = get_post_meta(6, 'member_3_image', true);
+		$member_3_facebook = get_post_meta(6, 'member_3_facebook', true);
+		$member_3_twitter = get_post_meta(6, 'member_3_twitter', true);
+		$member_3_flickr = get_post_meta(6, 'member_3_flickr', true);
+
+		$member_4_name = get_post_meta(6, 'member_4_name', true);
+		$member_4_job = get_post_meta(6, 'member_4_job', true);
+		$member_4_image = get_post_meta(6, 'member_4_image', true);
+		$member_4_facebook = get_post_meta(6, 'member_4_facebook', true);
+		$member_4_twitter = get_post_meta(6, 'member_4_twitter', true);
+		$member_4_flickr = get_post_meta(6, 'member_4_flickr', true);
+// ========================================================
+// END CUSTOM FIELDS
+// ========================================================
 
 //get the header
 get_header();  ?>
@@ -130,31 +165,82 @@ DONATE
 	</section><!--donate-->
 
 <!-- =============================================
-team
+TEAM
 ==================================================-->
 	<section class="team">
 		<div class="team-wrapper">
 			<h4><?php echo $team_title; ?></h4>
 			<p class="lead"><?php echo $team_tagline; ?></p>
-			<p class='about-text'><?php echo $team_text; ?></p>
 			<div class="team-member-wrapper">
 
-				<div class="team-member">
+				<!-- TEAM MEMBER 1 -->
+				<div class="team-member team-member-1">
 					<div class="member-image">
 						<div class="member-face">
-							<img src="" alt="">
+							<img src="http://localhost:8888/bootcamp-projects/week-7-project/wp-content/uploads/2015/08/member-1-image.jpg" alt="">
 						</div><!--member-face-->
 						<div class="member-social">
-							<span><i class="fa fa-twitter"></i></span>
-							<span><i class="fa fa-twitter"></i></span>
-							<span><i class="fa fa-twitter"></i></span>
+							<a href="#"><span><i class="fa fa-twitter"></i></span></a>
+							<a href="#"><span><i class="fa fa-facebook"></i></span></a>
+							<a href="#"><span><i class="fa fa-flickr"></i></span></a>
 						</div><!--member-social-->
-						
 					</div><!-- member-image-->
 					<div class="member-name">
 						
 					</div><!--member-name-->
 				</div><!--team-member-->
+
+				<!-- TEAM MEMBER 2 -->
+				<div class="team-member team-member-2">
+					<div class="member-image">
+						<div class="member-face">
+							<img src="" alt="">
+						</div><!--member-face-->
+						<div class="member-social">
+							<a href="#"><span><i class="fa fa-twitter"></i></span></a>
+							<a href="#"><span><i class="fa fa-facebook"></i></span></a>
+							<a href="#"><span><i class="fa fa-flickr"></i></span></a>
+						</div><!--member-social-->
+					</div><!-- member-image-->
+					<div class="member-name">
+						
+					</div><!--member-name-->
+				</div><!--team-member-->
+
+				<!-- TEAM MEMBER 3 -->
+				<div class="team-member team-member-3">
+					<div class="member-image">
+						<div class="member-face">
+							<img src="" alt="">
+						</div><!--member-face-->
+						<div class="member-social">
+							<a href="#"><span><i class="fa fa-twitter"></i></span></a>
+							<a href="#"><span><i class="fa fa-facebook"></i></span></a>
+							<a href="#"><span><i class="fa fa-flickr"></i></span></a>
+						</div><!--member-social-->
+					</div><!-- member-image-->
+					<div class="member-name">
+						
+					</div><!--member-name-->
+				</div><!--team-member-->
+
+				<!-- TEAM MEMBER 4 -->
+				<div class="team-member team-member-4">
+					<div class="member-image">
+						<div class="member-face">
+							<img src="" alt="">
+						</div><!--member-face-->
+						<div class="member-social">
+							<a href="#"><span><i class="fa fa-twitter"></i></span></a>
+							<a href="#"><span><i class="fa fa-facebook"></i></span></a>
+							<a href="#"><span><i class="fa fa-flickr"></i></span></a>
+						</div><!--member-social-->
+					</div><!-- member-image-->
+					<div class="member-name">
+						
+					</div><!--member-name-->
+				</div><!--team-member-->
+
 			</div><!--team-member-wrapper-->
 
 			

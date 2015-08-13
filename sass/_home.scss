@@ -13,6 +13,10 @@ $purple: #9E62B7;
 $red: #DF342E;
 $yellow: #EDBA10;
 $grey: #869292;
+$member-bg: #EFEFEF;
+$team-bg: #F4F5F6;
+$social-hover: #46AB91;
+$social: #8CA0A9;
 
 // MIXINS
 // ========================================================
@@ -149,15 +153,60 @@ $grey: #869292;
 .donate-wrapper{
 	text-align: center;
 	color: $white;
-	padding: 10% 0;
+	padding: 8% 0;
 	display: flex;
 	flex-direction: column;
 	@include center-all();
+} //donate-wrapper
 
+// ========================================================
+// TEAM
+// ========================================================
+
+.team-wrapper{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 8% 0;
+	background: $team-bg;
 }
-
-
-
+.team-member-wrapper{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 90%;
+	margin: 1% auto;
+}
+.team-member{
+	display: flex;
+	flex-direction: column;
+	width: 23%;
+	margin: 1%;
+	background: $member-bg;
+	img{
+		width: 100%;
+		border-radius: 50%;
+	}
+} //team-member
+.member-image{
+	display: flex;
+	padding: 10%;
+}
+.member-face{
+	width: 80%;
+}
+.member-social{
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	span{
+		display: flex;
+		@include center-all();
+		width: 100%;
+		border-radius: 50%;
+		background: $social;
+	}
+}
 
 
 
