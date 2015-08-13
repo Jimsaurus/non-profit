@@ -34,7 +34,7 @@ function theme_setup() {
 	) );
 	/*
 	 * Custom background
-	 * 
+	 *
 	 */
 
 	add_theme_support( 'custom-background', array(
@@ -276,3 +276,4 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
