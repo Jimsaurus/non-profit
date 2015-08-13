@@ -57,7 +57,9 @@ echo paginate_links( array(
   'current' => max( 1, get_query_var('paged') ),
   'total' => $wp_query->max_num_pages,
   'mid_size' => 2,
-  'type' => 'list'
+  'type' => 'list',
+  'prev_text' => '«',
+  'next_text' => '»'
 ) );
 ?>
   <?php endif; ?> -->
