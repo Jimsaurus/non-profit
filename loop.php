@@ -43,8 +43,25 @@
 
   <?php endwhile; // End the loop.?>
 
-  <?php // Display navigation to next/previous pages when applicable ?>
+<?php // Display navigation to next/previous pages when applicable ?>
   <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-    <p class="alignleft"><?php next_posts_link('&laquo; Older Entries'); ?></p>
-    <p class="alignright"><?php previous_posts_link('Newer Entries &raquo;'); ?></p>
-  <?php endif; ?>
+
+    <?php
+global $wp_query;
+
+$big = 999999999; // need an unlikely integer
+
+echo paginate_links( array(
+  'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+  'format' => '?paged=%#%',
+  'current' => max( 1, get_query_var('paged') ),
+  'total' => $wp_query->max_num_pages,
+  'mid_size' => 2,
+  'type' => 'list',
+  'prev_text' => '«',
+  'next_text' => '»'
+) );
+?>
+  <?php endif; ?> -->
+
+

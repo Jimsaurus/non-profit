@@ -61,6 +61,24 @@ img {
   clear: both;
 }
 
+.page-numbers{
+  list-style-type: none;
+  li{
+    display: block;
+    float: left;
+    font-size: 1.5rem;
+    border: 1px solid $primary-gray;
+    width: 20px;
+    text-align: center;
+  }
+
+  .current{
+    display: block;
+    width:20px;
+    background: $teal;
+    color:white;
+  }
+}
 
 
 
