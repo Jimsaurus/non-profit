@@ -32,6 +32,16 @@ function theme_setup() {
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 	) );
+	/*
+	 * Custom background
+	 * 
+	 */
+
+	add_theme_support( 'custom-background', array(
+	'default-color'          => 'salmon',
+	'default-position-x'     => 'center',
+	'default-attachment'     => 'cover',
+	) );
 
 }
 endif;
