@@ -31,6 +31,9 @@ $social: #8CA0A9;
 	background-size: cover;
 	background-position: center;
 }
+@mixin trans(){
+	transition: all 0.3s ease; 
+}
 
 // ========================================================
 // GENERAL
@@ -183,6 +186,8 @@ $social: #8CA0A9;
 	width: 23%;
 	margin: 1%;
 	background: $member-bg;
+	border: 1px solid $white;
+	padding:1%;
 	img{
 		width: 100%;
 		border-radius: 50%;
@@ -190,24 +195,43 @@ $social: #8CA0A9;
 } //team-member
 .member-image{
 	display: flex;
-	padding: 10%;
+	padding: 8%;
 }
 .member-face{
 	width: 80%;
+	padding-right: 6%;
 }
 .member-social{
 	width: 20%;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-around;
 	span{
 		display: flex;
 		@include center-all();
-		width: 100%;
 		border-radius: 50%;
 		background: $social;
-	}
-}
+		height:33px;
+		width: 33px;
+		color: $white;
+		font-size: 1.3rem;
+		@include trans();
+		&:hover{
+			background: $social-hover;
+		}
+	}//social span
+}// member-social
 
+.member-name{
+	h5{
+		margin: 0;
+		font-weight: 300;
+	}
+	p{
+		margin: 2% 0 10% 0;
+		text-transform: uppercase;
+	}
+}// member-name
 
 
 

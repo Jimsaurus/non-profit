@@ -186,6 +186,8 @@ TEAM
 						</div><!--member-social-->
 					</div><!-- member-image-->
 					<div class="member-name">
+						<h5><?php echo $member_1_name; ?></h5>
+						<p>- <?php echo $member_1_job; ?> -</p>
 						
 					</div><!--member-name-->
 				</div><!--team-member-->
@@ -194,7 +196,7 @@ TEAM
 				<div class="team-member team-member-2">
 					<div class="member-image">
 						<div class="member-face">
-							<img src="" alt="">
+							<img src="http://localhost:8888/bootcamp-projects/week-7-project/wp-content/uploads/2015/08/member-1-image.jpg" alt="">
 						</div><!--member-face-->
 						<div class="member-social">
 							<a href="#"><span><i class="fa fa-twitter"></i></span></a>
@@ -203,7 +205,8 @@ TEAM
 						</div><!--member-social-->
 					</div><!-- member-image-->
 					<div class="member-name">
-						
+						<h5><?php echo $member_1_name; ?></h5>
+						<p>- <?php echo $member_1_job; ?> -</p>
 					</div><!--member-name-->
 				</div><!--team-member-->
 
@@ -211,7 +214,7 @@ TEAM
 				<div class="team-member team-member-3">
 					<div class="member-image">
 						<div class="member-face">
-							<img src="" alt="">
+							<img src="http://localhost:8888/bootcamp-projects/week-7-project/wp-content/uploads/2015/08/member-1-image.jpg" alt="">
 						</div><!--member-face-->
 						<div class="member-social">
 							<a href="#"><span><i class="fa fa-twitter"></i></span></a>
@@ -220,7 +223,8 @@ TEAM
 						</div><!--member-social-->
 					</div><!-- member-image-->
 					<div class="member-name">
-						
+						<h5><?php echo $member_1_name; ?></h5>
+						<p>- <?php echo $member_1_job; ?> -</p>
 					</div><!--member-name-->
 				</div><!--team-member-->
 
@@ -228,7 +232,7 @@ TEAM
 				<div class="team-member team-member-4">
 					<div class="member-image">
 						<div class="member-face">
-							<img src="" alt="">
+							<img src="http://localhost:8888/bootcamp-projects/week-7-project/wp-content/uploads/2015/08/member-1-image.jpg" alt="">
 						</div><!--member-face-->
 						<div class="member-social">
 							<a href="#"><span><i class="fa fa-twitter"></i></span></a>
@@ -237,7 +241,8 @@ TEAM
 						</div><!--member-social-->
 					</div><!-- member-image-->
 					<div class="member-name">
-						
+						<h5><?php echo $member_1_name; ?></h5>
+						<p>- <?php echo $member_1_job; ?> -</p>
 					</div><!--member-name-->
 				</div><!--team-member-->
 
