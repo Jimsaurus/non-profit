@@ -75,6 +75,10 @@
 		$member_4_facebook = get_post_meta(6, 'member_4_facebook', true);
 		$member_4_twitter = get_post_meta(6, 'member_4_twitter', true);
 		$member_4_flickr = get_post_meta(6, 'member_4_flickr', true);
+	//EVENTS
+	$events_title = get_post_meta(6, 'events_title', true);
+	$events_tagline = get_post_meta(6, 'events_tagline', true);
+
 // ========================================================
 // END CUSTOM FIELDS
 // ========================================================
@@ -247,14 +251,30 @@ TEAM
 				</div><!--team-member-->
 
 			</div><!--team-member-wrapper-->
-
-			
-
 		</div><!--team-wrapper-->
 	</section><!--team-->
 
-
-
+<!-- =============================================
+EVENTS
+==================================================-->
+	<section class="events">
+		<div class="triangle"></div>
+		<div class="events-wrapper">
+			<h4><?php echo $events_title; ?></h4>
+			<p class="lead"><?php echo $events_tagline; ?></p>
+			<div class="events-wrapper">
+				<!-- display lastest posts -->
+				<?php
+					$args = array( 'numberposts' => '5' );
+					$recent_posts = wp_get_recent_posts( $args );
+					foreach( $recent_posts as $recent ){
+						echo '<div><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </div> ';
+					}
+				?>
+			</div>
+			
+		</div>
+	</section><!--events-->
 
 
 
@@ -268,5 +288,4 @@ TEAM
 
 
 </main><!--home-wrapper-->
-
 <?php get_footer(); ?>
