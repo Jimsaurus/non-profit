@@ -17,6 +17,7 @@ $member-bg: #EFEFEF;
 $team-bg: #F4F5F6;
 $social-hover: #46AB91;
 $social: #8CA0A9;
+$gallery-green: #46AB91;
 
 // MIXINS
 // ========================================================
@@ -247,19 +248,56 @@ $social: #8CA0A9;
 // ========================================================
 
 .events-wrapper{
-	padding-top: 8%;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	div{
+	.home-post-item{
 		text-align: left;
-		padding: 2%;
+		padding: 3% 5%;
 		font-size: 3rem;
 		font-weight: 100;
-	}
+		background: lighten(#7090A8, 5%);
+		a{
+			color: $white;
+		}
+		&:nth-child(2){
+			background: #7090A8;
+		}
+		&:nth-child(3){
+			background: #517991;
+		}
+		&:nth-child(4){
+			background: #19344D;
+		}
+		&:nth-child(5){
+			background: #172C43;
+		}
+	} //div
+}//events-wrapper
+
+// ========================================================
+// GALLERY
+// ========================================================
+.gallery{
+	background: $gallery-green;
+	color: $white;
 }
-
-
+.gallery-wrapper{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+// ========================================================
+// CONTACT
+// ========================================================
+.contact .triangle{
+	border-color: $gallery-green transparent transparent transparent;
+}
+.contact-wrapper{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
 
 
 

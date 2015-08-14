@@ -78,6 +78,12 @@
 	//EVENTS
 	$events_title = get_post_meta(6, 'events_title', true);
 	$events_tagline = get_post_meta(6, 'events_tagline', true);
+	//GALLERY ===================================================
+	$gallery_title = get_post_meta(6, 'gallery_title', true);
+	$gallery_tagline = get_post_meta(6, 'gallery_tagline', true);
+	//CONTACT ===================================================
+	$contact_title = get_post_meta(6, 'contact_title', true);
+	$contact_tagline = get_post_meta(6, 'contact_tagline', true);
 
 // ========================================================
 // END CUSTOM FIELDS
@@ -259,7 +265,7 @@ EVENTS
 ==================================================-->
 	<section class="events">
 		<div class="triangle"></div>
-		<div class="events-wrapper">
+		<div class="events-outer-wrapper">
 			<h4><?php echo $events_title; ?></h4>
 			<p class="lead"><?php echo $events_tagline; ?></p>
 			<div class="events-wrapper">
@@ -268,7 +274,7 @@ EVENTS
 					$args = array( 'numberposts' => '5' );
 					$recent_posts = wp_get_recent_posts( $args );
 					foreach( $recent_posts as $recent ){
-						echo '<div><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </div> ';
+						echo '<div class ="home-post-item"><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </div> ';
 					}
 				?>
 			</div>
@@ -276,7 +282,33 @@ EVENTS
 		</div>
 	</section><!--events-->
 
-
+<!-- =============================================
+GALLERY
+==================================================-->
+	<section class="gallery">
+		<div class="gallery-wrapper">
+			<h4><?php echo $gallery_title; ?></h4>
+			<p class="lead"><?php echo $gallery_tagline; ?></p>
+			<div class="gallery-wrapper">
+				
+			</div>
+			
+		</div>
+	</section><!--gallery-->
+<!-- =============================================
+CONTACT
+==================================================-->
+	<section class="contact">
+		<div class="triangle"></div>
+		<div class="contact-wrapper">
+			<h4><?php echo $contact_title; ?></h4>
+			<p class="lead"><?php echo $contact_tagline; ?></p>
+			<div class="contact-wrapper">
+				
+			</div>
+			
+		</div><!--contact-wrapper -->
+	</section><!--contact-->
 
 
 
