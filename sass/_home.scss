@@ -44,6 +44,7 @@ $gallery-green: #46AB91;
 	margin: 0 auto;
 	h1, h2, h3, h4, h5, h6{
 		font-weight: 100;
+		text-align: center;
 	}
 	h2{
 		font-size: 6rem;
@@ -67,6 +68,7 @@ $gallery-green: #46AB91;
 		font-weight: 300;
 		font-size: 2rem;
 		margin:0 10% 3% 10%;
+		text-align: center;
 	}
 }//home-wrapper
 
@@ -82,7 +84,7 @@ $gallery-green: #46AB91;
 	flex-direction: column;
 	text-align: center;
 	color: $white;
-	padding-top: 15%;
+	padding-top: 25%;
 	@include center-all();
 	i{
 		font-size: 5rem;
@@ -247,6 +249,8 @@ $gallery-green: #46AB91;
 // EVENTS
 // ========================================================
 
+.events-outer-wrapper{
+}
 .events-wrapper{
 	text-align: center;
 	display: flex;

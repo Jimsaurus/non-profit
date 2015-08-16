@@ -2,8 +2,16 @@
 	display:flex;
 	flex-direction: row;
 	justify-content: space-between;
-	background: #383838;
+	background: #fff;
 	box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+	align-items: center;
+	h1{
+		img{
+			width: 50px;
+			padding-left: 20%;
+			margin-left: 10px;
+		}
+	}
 }
 
 nav{
@@ -20,11 +28,11 @@ ul.menu {
 		a {
 			color: #333;
 			padding: 15px;
-			color: white;
+			color: #383838;
 			text-transform: uppercase;
 			font-size: 1.2rem;
 			&:hover{
-				border-bottom: 3px solid white;
+				border-bottom: 3px solid #383838;
 			} //hover
 		}// a
 	}// li

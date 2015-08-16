@@ -17,13 +17,21 @@
 </head>
 
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); 
+// NAV VARIABLES
+$navigation_logo = get_field('navigation_logo');
+
+
+?>>
 
 <header class="main-nav">
   <div class="container">
 	<h1>
 		<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-		<?php bloginfo( 'name' ); ?>
+		<!-- if user uploaded an image -->
+		
+			<img src="<?php echo $navigation_logo['url']; ?> " alt="<?php echo $navigation_logo['alt']; ?> ">
+
 		</a>
 	</h1>
 	
