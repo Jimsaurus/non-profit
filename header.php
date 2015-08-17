@@ -26,7 +26,7 @@
 	<h1>
 		<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
 		<!-- if user uploaded an image -->
-			<img src="assets/logo.png" alt="">
+			<img src="http://localhost:8888/bootcamp-projects/week-7-project/wp-content/uploads/2015/08/logo.png" alt="">
 
 		</a>
 	</h1>

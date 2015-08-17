@@ -69,7 +69,8 @@
 	flex-direction: column;
 	text-align: center;
 	color: $white;
-	padding-top: 25%;
+	height: 90vh;
+	padding-top: 10%;
 	@include center-all();
 	i{
 		font-size: 5rem;
