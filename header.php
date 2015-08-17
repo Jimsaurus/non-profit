@@ -17,13 +17,17 @@
 </head>
 
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); 
+
+?>>
 
 <header class="main-nav">
-  <div class="container">
+  <div class="nav-wrapper">
 	<h1>
 		<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-		<?php bloginfo( 'name' ); ?>
+		<!-- if user uploaded an image -->
+			<img src="http://localhost:8888/bootcamp-projects/week-7-project/wp-content/uploads/2015/08/logo.png" alt="">
+
 		</a>
 	</h1>
 
