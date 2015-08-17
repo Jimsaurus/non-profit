@@ -1,3 +1,51 @@
 footer {
 	clear: both;
+  background:#383838;
+  color:white;
+  p{
+    margin-bottom:0;
+  }
+
+  #footer-widget{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+  }
+
+  h3{
+    font-size:5rem;
+    font-weight:200;
+    text-align: center;
+  }
+
+  .bigContact{
+    display:flex;
+    justify-content: center;
+  }
+  .bigContact p{
+    margin: 0;
+  }
+  .bigContact-phone li{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+  }
+
+  .bigContact-label{
+    min-width:60px;
+    font-size:1.4rem;
+  }
+
+  .bigContact-value{
+    float:none;
+    font-size:1.4rem;
+  }
+
+  .bigContact-emails a{
+    color:$teal;
+    font-size:1.4rem;
+  }
+  p{
+    text-align: center;
+  }
 }

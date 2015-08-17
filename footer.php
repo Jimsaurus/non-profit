@@ -1,6 +1,12 @@
 <footer>
-  <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  <div id="footer-sidebar" class="container">
+  <div id="footer-widget">
+    <?php
+    if(is_active_sidebar('footer-widget')){
+      dynamic_sidebar('footer-widget');
+      } ?>
+  </div>
+    <p>&copy; Ancient Funk <?php echo date('Y'); ?></p>
   </div>
 </footer>
 
