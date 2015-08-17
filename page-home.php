@@ -224,6 +224,7 @@ GALLERY
 				<?php endif; ?>
 			</div><!--gallery-items-wrapper -->
 			
+			
 		</div><!--gallery-wrapper-->
 
 	</section><!--gallery-->
