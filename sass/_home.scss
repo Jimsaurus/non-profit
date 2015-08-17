@@ -146,20 +146,24 @@ $text-light: #A4B6BE;
 		display: flex;
 		@include center-all();
 		margin: 0 auto;
+		@include trans();
+		&:hover{
+			transform: scale(1.1);
+		}
 		i{
 			color: $white;
 			font-size: 3rem;
 		}
 	}// div
 }// .value
-.value1{background: $green}
-.value2{background: $blue}
-.value3{background: $purple}
-.value4{background: $dblue}
-.value5{background: $yellow}
-.value6{background: $orange}
-.value7{background: $red}
-.value8{background: $grey}
+.value1{background: $green;}
+.value2{background: $blue;}
+.value3{background: $purple;}
+.value4{background: $dblue;}
+.value5{background: $yellow;}
+.value6{background: $orange;}
+.value7{background: $red;}
+.value8{background: $grey;}
 
 // ========================================================
 // DONATE
@@ -287,6 +291,10 @@ $text-light: #A4B6BE;
 		background: lighten(#7090A8, 5%);
 		a{
 			color: $white;
+			transition: all 0.2s ease;
+			&:hover{
+				margin-left: 20px;
+			}
 		}
 		&:nth-child(2){
 			background: #7090A8;
@@ -315,6 +323,19 @@ $text-light: #A4B6BE;
 	display: flex;
 	flex-direction: column;
 	padding: 5% 0;
+}
+.gallery-items-wrapper{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.gallery-item{
+	margin: 5px;
+	width: 200px;
+	img{
+		width: 100%;
+	}
 }
 // ========================================================
 // CONTACT

@@ -8,12 +8,12 @@
 // ========================================================
 
 	//HERO ===================================================
-	$hero_title = get_post_meta(6, 'hero_title', true);
-	$hero_tagline = get_post_meta(6, 'hero_tagline', true);
+	$hero_title = get_field('hero_title');
+	$hero_tagline = get_field('hero_tagline');
 	//ABOUT ===================================================
-	$about_title = get_post_meta(6, 'about_title', true);
-	$about_tagline = get_post_meta(6, 'about_tagline', true);
-	$about_text = get_post_meta(6, 'about_text', true);
+	$about_title = get_field('about_title');
+	$about_tagline = get_field('about_tagline');
+	$about_text = get_field('about_text');
 	//VALUES ===================================================
 	$value_1 = get_post_meta(6, 'value_1', true);
 	$value_1_text = get_post_meta(6, 'value_1_text', true);
@@ -40,23 +40,24 @@
 	$value_8_text = get_post_meta(6, 'value_8_text', true);
 
 	//DONATE ===================================================
-	$donate_title = get_post_meta(6, 'donate_title', true);
-	$donate_tagline = get_post_meta(6, 'donate_tagline', true);
-	$donate_text = get_post_meta(6, 'donate_text', true);
+	$donate_title = get_field('donate_title');
+	$donate_tagline = get_field('donate_tagline');
+	$donate_text = get_field('donate_text');
 
 	//TEAM ===================================================
 	$team_title = get_field('team_title');
 	$team_tagline = get_field('team_tagline');
 
 	//EVENTS
-	$events_title = get_post_meta(6, 'events_title', true);
-	$events_tagline = get_post_meta(6, 'events_tagline', true);
+	$events_title = get_field('events_title');
+	$events_tagline = get_field('events_tagline');
 	//GALLERY ===================================================
-	$gallery_title = get_post_meta(6, 'gallery_title', true);
-	$gallery_tagline = get_post_meta(6, 'gallery_tagline', true);
+	$gallery_title = get_field('gallery_title');
+	$gallery_tagline = get_field('gallery_tagline');
+	$gallery = get_field('gallery_wrapper');
 	//CONTACT ===================================================
-	$contact_title = get_post_meta(6, 'contact_title', true);
-	$contact_tagline = get_post_meta(6, 'contact_tagline', true);
+	$contact_title = get_field('contact_title');
+	$contact_tagline = get_field('contact_tagline');
 
 // ========================================================
 // END CUSTOM FIELDS
@@ -209,12 +210,22 @@ GALLERY
 		<div class="gallery-wrapper">
 			<h4><?php echo $gallery_title; ?></h4>
 			<p class="lead"><?php echo $gallery_tagline; ?></p>
-			<div class="gallery-wrapper">
-
-				
-			</div>
+			<div class="gallery-items-wrapper">
+				<?php 
+				if( $gallery ): ?>
+				    
+				        <?php foreach( $gallery as $image ): ?>
+				        	<div class="gallery-item">
+				                <a href="<?php echo $image['url']; ?>">
+				                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+				                </a>
+				            </div><!--gallery-item-->
+				        <?php endforeach; ?>
+				    
+				<?php endif; ?>
+			</div><!--gallery-items-wrapper -->
 			
-		</div>
+		</div><!--gallery-wrapper-->
 	</section><!--gallery-->
 
 
