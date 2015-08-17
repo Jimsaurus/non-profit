@@ -3,16 +3,18 @@
 /*
 	Template Name: Home Page
 */
-
+// ========================================================
 //Custom Fields
-	//HERO
+// ========================================================
+
+	//HERO ===================================================
 	$hero_title = get_post_meta(6, 'hero_title', true);
 	$hero_tagline = get_post_meta(6, 'hero_tagline', true);
-	//ABOUT
+	//ABOUT ===================================================
 	$about_title = get_post_meta(6, 'about_title', true);
 	$about_tagline = get_post_meta(6, 'about_tagline', true);
 	$about_text = get_post_meta(6, 'about_text', true);
-	//VALUES
+	//VALUES ===================================================
 	$value_1 = get_post_meta(6, 'value_1', true);
 	$value_1_text = get_post_meta(6, 'value_1_text', true);
 
@@ -37,12 +39,28 @@
 	$value_8 = get_post_meta(6, 'value_8', true);
 	$value_8_text = get_post_meta(6, 'value_8_text', true);
 
-	//DONATE
+	//DONATE ===================================================
 	$donate_title = get_post_meta(6, 'donate_title', true);
 	$donate_tagline = get_post_meta(6, 'donate_tagline', true);
 	$donate_text = get_post_meta(6, 'donate_text', true);
 
+	//TEAM ===================================================
+	$team_title = get_field('team_title');
+	$team_tagline = get_field('team_tagline');
 
+	//EVENTS
+	$events_title = get_post_meta(6, 'events_title', true);
+	$events_tagline = get_post_meta(6, 'events_tagline', true);
+	//GALLERY ===================================================
+	$gallery_title = get_post_meta(6, 'gallery_title', true);
+	$gallery_tagline = get_post_meta(6, 'gallery_tagline', true);
+	//CONTACT ===================================================
+	$contact_title = get_post_meta(6, 'contact_title', true);
+	$contact_tagline = get_post_meta(6, 'contact_tagline', true);
+
+// ========================================================
+// END CUSTOM FIELDS
+// ========================================================
 
 //get the header
 get_header();  ?>
@@ -124,58 +142,81 @@ DONATE
 			<p class="lead"><?php echo $donate_tagline; ?></p>
 			<p class='about-text'><?php echo $donate_text; ?></p>
 			<span class="hero-button">HELP TODAY</span>
-			
-
 		</div><!--donate-wrapper-->
 	</section><!--donate-->
 
 <!-- =============================================
-team
+TEAM
 ==================================================-->
 	<section class="team">
 		<div class="team-wrapper">
 			<h4><?php echo $team_title; ?></h4>
 			<p class="lead"><?php echo $team_tagline; ?></p>
-			<p class='about-text'><?php echo $team_text; ?></p>
 			<div class="team-member-wrapper">
-
+				<!-- define the loop -->
+				<?php $loop = new WP_Query(array( 'post_type' => 'team_member', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
+				<!-- loop through the team members -->
+				<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
+				<!-- TEAM MEMBER -->
 				<div class="team-member">
 					<div class="member-image">
 						<div class="member-face">
-							<img src="" alt="">
+							<img src="<?php the_field('member_image'); ?>" alt="<?php the_field('member_image'); ?>">
 						</div><!--member-face-->
 						<div class="member-social">
-							<span><i class="fa fa-twitter"></i></span>
-							<span><i class="fa fa-twitter"></i></span>
-							<span><i class="fa fa-twitter"></i></span>
+							<a href="<?php the_field('member_twitter');  ?> "><span><i class="fa fa-twitter"></i></span></a>
+							<a href="<?php the_field('member_facebook');  ?>"><span><i class="fa fa-facebook"></i></span></a>
+							<a href="<?php the_field('member_flickr');  ?>"><span><i class="fa fa-flickr"></i></span></a>
 						</div><!--member-social-->
-						
 					</div><!-- member-image-->
 					<div class="member-name">
-						
+						<h5><?php the_field('member_name'); ?></h5>
+						<p>- <?php the_field('member_job'); ?> -</p>
 					</div><!--member-name-->
 				</div><!--team-member-->
+				<?php endwhile; ?>
 			</div><!--team-member-wrapper-->
-
-			
-
 		</div><!--team-wrapper-->
 	</section><!--team-->
 
+<!-- =============================================
+EVENTS
+==================================================-->
+	<section class="events">
+		<div class="triangle"></div>
+		<div class="events-outer-wrapper">
+			<h4><?php echo $events_title; ?></h4>
+			<p class="lead"><?php echo $events_tagline; ?></p>
+			<div class="events-wrapper">
+				<!-- display lastest posts -->
+				<?php
+					$args = array( 'numberposts' => '5' );
+					$recent_posts = wp_get_recent_posts( $args );
+					foreach( $recent_posts as $recent ){
+						echo '<div class ="home-post-item"><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </div> ';
+					}
+				?>
+			</div>
+			
+		</div>
+	</section><!--events-->
 
-
-
-
-
-
-
-
-
-
-
+<!-- =============================================
+GALLERY
+==================================================-->
+	<section class="gallery">
+		<div class="gallery-wrapper">
+			<h4><?php echo $gallery_title; ?></h4>
+			<p class="lead"><?php echo $gallery_tagline; ?></p>
+			<div class="gallery-wrapper">
+				
+				
+			</div>
+			
+		</div>
+	</section><!--gallery-->
 
 
 
 </main><!--home-wrapper-->
-
 <?php get_footer(); ?>
