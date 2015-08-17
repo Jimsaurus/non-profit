@@ -2,7 +2,7 @@
 
 <div class="main">
   <div class="container">
-  <div class="post-content">
+    <div class="post-content">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <h2 class="entry-title"><?php the_title(); ?></h2>
@@ -25,5 +25,7 @@
         </div><!-- #nav-below -->
         <?php comments_template( '', true ); ?>
       <?php endwhile; // end of the loop. ?>
-</div> <!-- /.main -->
-<?php get_footer(); ?>
+    </div> <!-- /.post-content -->
+  </div><!-- .container-->
+  <?php get_footer(); ?>
+</div><!--.main-->
