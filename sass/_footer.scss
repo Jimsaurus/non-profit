@@ -1,3 +1,16 @@
 footer {
 	clear: both;
+  #footer-widget{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+  }
+  .bigContact-phone li{
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+  }
+  .bigContact-value{
+    float:none;
+  }
 }

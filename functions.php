@@ -4,7 +4,7 @@
 
 if ( ! function_exists( 'theme_setup' ) ):
 
-function theme_setup() {
+	function theme_setup() {
 
 	/* This theme uses post thumbnails (aka "featured images")
 	*  all images will be cropped to thumbnail size (below), as well as
@@ -23,7 +23,7 @@ function theme_setup() {
   * adding additional menus to the array. */
 	register_nav_menus( array(
 		'primary' => 'Primary Navigation'
-	) );
+		) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -31,17 +31,17 @@ function theme_setup() {
 	 */
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
-	) );
+		) );
 	/*
 	 * Custom background
 	 *
 	 */
 
 	add_theme_support( 'custom-background', array(
-	'default-color'          => 'salmon',
-	'default-position-x'     => 'center',
-	'default-attachment'     => 'cover',
-	) );
+		'default-color'          => 'salmon',
+		'default-position-x'     => 'center',
+		'default-attachment'     => 'cover',
+		) );
 
 }
 endif;
@@ -57,29 +57,29 @@ function hackeryou_scripts() {
 
 	//Don't use WordPress' local copy of jquery, load our own version from a CDN instead
 	wp_deregister_script('jquery');
-  wp_enqueue_script(
-  	'jquery',
-  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
+	wp_enqueue_script(
+		'jquery',
+		"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
   	false, //dependencies
   	null, //version number
   	true //load in footer
-  );
+  	);
 
-  wp_enqueue_script(
+	wp_enqueue_script(
     'plugins', //handle
     get_template_directory_uri() . '/js/plugins.js', //source
     false, //dependencies
     null, // version number
     true //load in footer
-  );
+    );
 
-  wp_enqueue_script(
+	wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/scripts.js', //source
     array( 'jquery', 'plugins' ), //dependencies
     null, // version number
     true //load in footer
-  );
+    );
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts' );
@@ -115,11 +115,11 @@ add_filter( 'wp_title', 'hackeryou_wp_title', 10, 2 );
 /*
   Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
-function hackeryou_page_menu_args( $args ) {
-	$args['show_home'] = true;
-	return $args;
-}
-add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
+  function hackeryou_page_menu_args( $args ) {
+  	$args['show_home'] = true;
+  	return $args;
+  }
+  add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
 
 
 /*
@@ -173,8 +173,17 @@ function hackeryou_widgets_init() {
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
-	) );
+		) );
 
+	register_sidebar(array(
+		'name' => 'Footer Widget',
+		'id' => 'footer-widget',
+		'description' => 'Appears in footer area',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>'
+		));
 }
 
 add_action( 'widgets_init', 'hackeryou_widgets_init' );
@@ -200,13 +209,13 @@ function hackeryou_posted_on() {
 			get_permalink(),
 			esc_attr( get_the_time() ),
 			get_the_date()
-		),
+			),
 		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
 			get_author_posts_url( get_the_author_meta( 'ID' ) ),
 			sprintf( esc_attr( 'View all posts by %s'), get_the_author() ),
 			get_the_author()
-		)
-	);
+			)
+		);
 }
 endif;
 
@@ -231,7 +240,7 @@ function hackeryou_posted_in() {
 		$tag_list,
 		get_permalink(),
 		the_title_attribute( 'echo=0' )
-	);
+		);
 }
 endif;
 
