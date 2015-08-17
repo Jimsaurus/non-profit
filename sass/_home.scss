@@ -2,26 +2,6 @@
 // HOME
 // ========================================================
 
-// VARIABLES
-// ========================================================
-$white: #fff;
-$green: #2CC65D;
-$orange: #DE6A1B;
-$blue: #2B84D3;
-$dblue:#212F3E;
-$purple: #9E62B7;
-$red: #DF342E;
-$yellow: #EDBA10;
-$grey: #869292;
-$member-bg: #EFEFEF;
-$team-bg: #F4F5F6;
-$social-hover: #46AB91;
-$social: #8CA0A9;
-$gallery-green: #46AB91;
-$text-dark: #637B88;
-$text-light: #A4B6BE;
-
-
 // MIXINS
 // ========================================================
 @mixin center-all(){
@@ -38,7 +18,7 @@ $text-light: #A4B6BE;
 	background-blend-mode: darken;
 }
 @mixin trans(){
-	transition: all 0.3s ease; 
+	transition: all 0.3s ease;
 }
 
 // ========================================================
@@ -103,7 +83,8 @@ $text-light: #A4B6BE;
 	font-size: 2rem;
 	margin: 4%;
 	&:hover{
-		background: lighten($green, 3%);
+		background: lighten($green, 5%);
+		cursor: pointer;
 	}
 }
 

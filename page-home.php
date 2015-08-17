@@ -67,7 +67,7 @@ get_header();  ?>
 <main class="home-wrapper">
 
 <!-- =============================================
-HERO  
+HERO
 ==================================================-->
 	<section class="hero">
 		<div class="hero-wrapper">
@@ -81,13 +81,12 @@ HERO
 <!-- =============================================
 ABOUT
 ==================================================-->
-	
+
 	<section class="about">
 		<div class="about-wrapper">
 			<h4><?php echo $about_title; ?></h4>
 			<p class="lead"><?php echo $about_tagline; ?></p>
 			<p class="about-text"><?php echo $about_text; ?></p>
-			
 			<div class="about-values">
 				<div class="value">
 					<div class="value1"><i class="fa fa-smile-o"></i></div>
@@ -109,22 +108,22 @@ ABOUT
 					<h5><?php echo $value_4; ?></h5>
 					<p><?php echo $value_4_text; ?></p>
 				</div><!--value-->
-				<div class="value">
+<!-- 				<div class="value">
 					<div class="value5"><i class="fa fa-bullhorn"></i></div>
 					<h5><?php echo $value_5; ?></h5>
 					<p><?php echo $value_5_text; ?></p>
-				</div><!--value-->
-				<div class="value">
+				</div><!--value- -->
+<!-- 				<div class="value">
 					<div class="value6"><i class="fa fa-slideshare"></i></div>
 					<h5><?php echo $value_6; ?></h5>
 					<p><?php echo $value_6_text; ?></p>
-				</div><!--value-->
-				<div class="value">
+				</div>value -->
+<!-- 				<div class="value">
 					<div class="value7"><i class="fa fa-pencil"></i></div>
 					<h5><?php echo $value_7; ?></h5>
 					<p><?php echo $value_7_text; ?></p>
 				</div><!--value-->
-				<div class="value">
+<!-- 				<div class="value">
 					<div class="value8"><i class="fa fa-check"></i></div>
 					<h5><?php echo $value_8; ?></h5>
 					<p><?php echo $value_8_text; ?></p>
@@ -197,7 +196,7 @@ EVENTS
 					}
 				?>
 			</div>
-			
+
 		</div>
 	</section><!--events-->
 
@@ -209,10 +208,10 @@ GALLERY
 			<h4><?php echo $gallery_title; ?></h4>
 			<p class="lead"><?php echo $gallery_tagline; ?></p>
 			<div class="gallery-wrapper">
-				
-				
+
+
 			</div>
-			
+
 		</div>
 	</section><!--gallery-->
 
