@@ -314,12 +314,13 @@ $text-light: #A4B6BE;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+	padding: 5% 0;
 }
 // ========================================================
 // CONTACT
 // ========================================================
-.contact .triangle{
-	border-color: $gallery-green transparent transparent transparent;
+.gallery .triangle{
+	border-color: #172C43 transparent transparent transparent;
 }
 .contact-wrapper{
 	text-align: center;

@@ -205,11 +205,12 @@ EVENTS
 GALLERY
 ==================================================-->
 	<section class="gallery">
+		<div class="triangle"></div>
 		<div class="gallery-wrapper">
 			<h4><?php echo $gallery_title; ?></h4>
 			<p class="lead"><?php echo $gallery_tagline; ?></p>
 			<div class="gallery-wrapper">
-				
+
 				
 			</div>
 			
