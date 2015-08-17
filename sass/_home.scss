@@ -18,6 +18,9 @@ $team-bg: #F4F5F6;
 $social-hover: #46AB91;
 $social: #8CA0A9;
 $gallery-green: #46AB91;
+$text-dark: #637B88;
+$text-light: #A4B6BE;
+
 
 // MIXINS
 // ========================================================
@@ -31,6 +34,8 @@ $gallery-green: #46AB91;
 @mixin bg-image(){
 	background-size: cover;
 	background-position: center;
+	background-color: rgba(43,7,7,0.4);
+	background-blend-mode: darken;
 }
 @mixin trans(){
 	transition: all 0.3s ease; 
@@ -40,11 +45,11 @@ $gallery-green: #46AB91;
 // GENERAL
 // ========================================================
 .home-wrapper{
-	max-width: 1100px;
 	margin: 0 auto;
 	h1, h2, h3, h4, h5, h6{
 		font-weight: 100;
 		text-align: center;
+
 	}
 	h2{
 		font-size: 6rem;
@@ -108,21 +113,30 @@ $gallery-green: #46AB91;
 .about-wrapper{
 	text-align: center;
 	margin: 5% 0;
+	h4{color: $text-dark;}
+	.lead{color: $text-light;}
+
 }//about-wrapper
 .about-text{
 	margin: 0 8%;
+	color: $text-dark;
 }
 .about-values{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-
+	justify-content: center;
 	width: 90%;
 	margin: 4% auto;
+	color: $text-dark;
 }
 .value{
-	width: 23%;
+	width: 220px;
 	margin: 1%;
+	color: $text-light;
+		h5{
+			color: $text-dark;
+		}
 	div{
 		width: 100px;
 		height: 100px;
@@ -132,7 +146,6 @@ $gallery-green: #46AB91;
 		display: flex;
 		@include center-all();
 		margin: 0 auto;
-
 		i{
 			color: $white;
 			font-size: 3rem;
@@ -163,6 +176,9 @@ $gallery-green: #46AB91;
 	display: flex;
 	flex-direction: column;
 	@include center-all();
+	.lead, .about-text{
+		color: $white;
+	}
 } //donate-wrapper
 
 // ========================================================
@@ -175,18 +191,21 @@ $gallery-green: #46AB91;
 	text-align: center;
 	padding: 8% 0;
 	background: $team-bg;
+	h4{color: $text-dark;}
+	.lead{color:$text-light;}
 }
 .team-member-wrapper{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: center;
 	width: 90%;
 	margin: 1% auto;
 }
 .team-member{
 	display: flex;
 	flex-direction: column;
-	width: 23%;
+	width: 220px;
 	margin: 1%;
 	background: $member-bg;
 	border: 1px solid $white;
@@ -229,10 +248,12 @@ $gallery-green: #46AB91;
 	h5{
 		margin: 0;
 		font-weight: 300;
+		color: $text-dark;
 	}
 	p{
 		margin: 2% 0 10% 0;
 		text-transform: uppercase;
+		color: $text-light;
 	}
 }// member-name
 
@@ -250,11 +271,14 @@ $gallery-green: #46AB91;
 // ========================================================
 
 .events-outer-wrapper{
+	h4{color: $text-dark;}
+	.lead{color:$text-light;}
 }
 .events-wrapper{
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+
 	.home-post-item{
 		text-align: left;
 		padding: 3% 5%;

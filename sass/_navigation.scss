@@ -1,10 +1,16 @@
-.main-nav .container{
+
+.main-nav{
+	box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+}
+.main-nav .nav-wrapper{
 	display:flex;
 	flex-direction: row;
 	justify-content: space-between;
 	background: #fff;
-	box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+	
 	align-items: center;
+	max-width: 1100px;
+	margin: 0 auto;
 	h1{
 		img{
 			width: 50px;

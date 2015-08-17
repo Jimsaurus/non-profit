@@ -18,19 +18,15 @@
 
 
 <body <?php body_class(); 
-// NAV VARIABLES
-$navigation_logo = get_field('navigation_logo');
-
 
 ?>>
 
 <header class="main-nav">
-  <div class="container">
+  <div class="nav-wrapper">
 	<h1>
 		<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
 		<!-- if user uploaded an image -->
-		
-			<img src="<?php echo $navigation_logo['url']; ?> " alt="<?php echo $navigation_logo['alt']; ?> ">
+			<img src="http://localhost:8888/bootcamp-projects/week-7-project/wp-content/uploads/2015/08/logo.png" alt="">
 
 		</a>
 	</h1>

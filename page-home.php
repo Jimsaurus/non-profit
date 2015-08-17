@@ -45,36 +45,9 @@
 	$donate_text = get_post_meta(6, 'donate_text', true);
 
 	//TEAM ===================================================
-	$team_title = get_post_meta(6, 'team_title', true);
-	$team_tagline = get_post_meta(6, 'team_tagline', true);
-		//MEMBERS
-		$member_1_name = get_post_meta(6, 'member_1_name', true);
-		$member_1_job = get_post_meta(6, 'member_1_job', true);
-		$member_1_image = get_post_meta(6, 'member_1_image', true);
-		$member_1_facebook = get_post_meta(6, 'member_1_facebook', true);
-		$member_1_twitter = get_post_meta(6, 'member_1_twitter', true);
-		$member_1_flickr = get_post_meta(6, 'member_1_flickr', true);
+	$team_title = get_field('team_title');
+	$team_tagline = get_field('team_tagline');
 
-		$member_2_name = get_post_meta(6, 'member_2_name', true);
-		$member_2_job = get_post_meta(6, 'member_2_job', true);
-		$member_2_image = get_post_meta(6, 'member_2_image', true);
-		$member_2_facebook = get_post_meta(6, 'member_2_facebook', true);
-		$member_2_twitter = get_post_meta(6, 'member_2_twitter', true);
-		$member_2_flickr = get_post_meta(6, 'member_2_flickr', true);
-
-		$member_3_name = get_post_meta(6, 'member_3_name', true);
-		$member_3_job = get_post_meta(6, 'member_3_job', true);
-		$member_3_image = get_post_meta(6, 'member_3_image', true);
-		$member_3_facebook = get_post_meta(6, 'member_3_facebook', true);
-		$member_3_twitter = get_post_meta(6, 'member_3_twitter', true);
-		$member_3_flickr = get_post_meta(6, 'member_3_flickr', true);
-
-		$member_4_name = get_post_meta(6, 'member_4_name', true);
-		$member_4_job = get_post_meta(6, 'member_4_job', true);
-		$member_4_image = get_post_meta(6, 'member_4_image', true);
-		$member_4_facebook = get_post_meta(6, 'member_4_facebook', true);
-		$member_4_twitter = get_post_meta(6, 'member_4_twitter', true);
-		$member_4_flickr = get_post_meta(6, 'member_4_flickr', true);
 	//EVENTS
 	$events_title = get_post_meta(6, 'events_title', true);
 	$events_tagline = get_post_meta(6, 'events_tagline', true);
@@ -169,8 +142,6 @@ DONATE
 			<p class="lead"><?php echo $donate_tagline; ?></p>
 			<p class='about-text'><?php echo $donate_text; ?></p>
 			<span class="hero-button">HELP TODAY</span>
-			
-
 		</div><!--donate-wrapper-->
 	</section><!--donate-->
 
@@ -182,80 +153,28 @@ TEAM
 			<h4><?php echo $team_title; ?></h4>
 			<p class="lead"><?php echo $team_tagline; ?></p>
 			<div class="team-member-wrapper">
-
-				<!-- TEAM MEMBER 1 -->
-				<div class="team-member team-member-1">
+				<!-- define the loop -->
+				<?php $loop = new WP_Query(array( 'post_type' => 'team_member', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
+				<!-- loop through the team members -->
+				<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
+				<!-- TEAM MEMBER -->
+				<div class="team-member">
 					<div class="member-image">
 						<div class="member-face">
-							<img src="http://localhost:8888/bootcamp-projects/week-7-project/wp-content/uploads/2015/08/member-1-image.jpg" alt="">
+							<img src="<?php the_field('member_image'); ?>" alt="<?php the_field('member_image'); ?>">
 						</div><!--member-face-->
 						<div class="member-social">
-							<a href="#"><span><i class="fa fa-twitter"></i></span></a>
-							<a href="#"><span><i class="fa fa-facebook"></i></span></a>
-							<a href="#"><span><i class="fa fa-flickr"></i></span></a>
+							<a href="<?php the_field('member_twitter');  ?> "><span><i class="fa fa-twitter"></i></span></a>
+							<a href="<?php the_field('member_facebook');  ?>"><span><i class="fa fa-facebook"></i></span></a>
+							<a href="<?php the_field('member_flickr');  ?>"><span><i class="fa fa-flickr"></i></span></a>
 						</div><!--member-social-->
 					</div><!-- member-image-->
 					<div class="member-name">
-						<h5><?php echo $member_1_name; ?></h5>
-						<p>- <?php echo $member_1_job; ?> -</p>
-						
+						<h5><?php the_field('member_name'); ?></h5>
+						<p>- <?php the_field('member_job'); ?> -</p>
 					</div><!--member-name-->
 				</div><!--team-member-->
-
-				<!-- TEAM MEMBER 2 -->
-				<div class="team-member team-member-2">
-					<div class="member-image">
-						<div class="member-face">
-							<img src="http://localhost:8888/bootcamp-projects/week-7-project/wp-content/uploads/2015/08/member-1-image.jpg" alt="">
-						</div><!--member-face-->
-						<div class="member-social">
-							<a href="#"><span><i class="fa fa-twitter"></i></span></a>
-							<a href="#"><span><i class="fa fa-facebook"></i></span></a>
-							<a href="#"><span><i class="fa fa-flickr"></i></span></a>
-						</div><!--member-social-->
-					</div><!-- member-image-->
-					<div class="member-name">
-						<h5><?php echo $member_1_name; ?></h5>
-						<p>- <?php echo $member_1_job; ?> -</p>
-					</div><!--member-name-->
-				</div><!--team-member-->
-
-				<!-- TEAM MEMBER 3 -->
-				<div class="team-member team-member-3">
-					<div class="member-image">
-						<div class="member-face">
-							<img src="http://localhost:8888/bootcamp-projects/week-7-project/wp-content/uploads/2015/08/member-1-image.jpg" alt="">
-						</div><!--member-face-->
-						<div class="member-social">
-							<a href="#"><span><i class="fa fa-twitter"></i></span></a>
-							<a href="#"><span><i class="fa fa-facebook"></i></span></a>
-							<a href="#"><span><i class="fa fa-flickr"></i></span></a>
-						</div><!--member-social-->
-					</div><!-- member-image-->
-					<div class="member-name">
-						<h5><?php echo $member_1_name; ?></h5>
-						<p>- <?php echo $member_1_job; ?> -</p>
-					</div><!--member-name-->
-				</div><!--team-member-->
-
-				<!-- TEAM MEMBER 4 -->
-				<div class="team-member team-member-4">
-					<div class="member-image">
-						<div class="member-face">
-							<img src="http://localhost:8888/bootcamp-projects/week-7-project/wp-content/uploads/2015/08/member-1-image.jpg" alt="">
-						</div><!--member-face-->
-						<div class="member-social">
-							<a href="#"><span><i class="fa fa-twitter"></i></span></a>
-							<a href="#"><span><i class="fa fa-facebook"></i></span></a>
-							<a href="#"><span><i class="fa fa-flickr"></i></span></a>
-						</div><!--member-social-->
-					</div><!-- member-image-->
-					<div class="member-name">
-						<h5><?php echo $member_1_name; ?></h5>
-						<p>- <?php echo $member_1_job; ?> -</p>
-					</div><!--member-name-->
-				</div><!--team-member-->
-
+				<?php endwhile; ?>
 			</div><!--team-member-wrapper-->
 		</div><!--team-wrapper-->
 	</section><!--team-->
@@ -291,31 +210,11 @@ GALLERY
 			<p class="lead"><?php echo $gallery_tagline; ?></p>
 			<div class="gallery-wrapper">
 				
+				
 			</div>
 			
 		</div>
 	</section><!--gallery-->
-<!-- =============================================
-CONTACT
-==================================================-->
-	<section class="contact">
-		<div class="triangle"></div>
-		<div class="contact-wrapper">
-			<h4><?php echo $contact_title; ?></h4>
-			<p class="lead"><?php echo $contact_tagline; ?></p>
-			<div class="contact-wrapper">
-				
-			</div>
-			
-		</div><!--contact-wrapper -->
-	</section><!--contact-->
-
-
-
-
-
-
-
 
 
 
