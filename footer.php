@@ -1,12 +1,13 @@
 <footer>
   <div id="footer-sidebar" class="container">
-  <div id="footer-widget">
-    <?php
-    if(is_active_sidebar('footer-widget')){
-      dynamic_sidebar('footer-widget');
-      } ?>
-  </div>
-    <p>&copy; Ancient Funk <?php echo date('Y'); ?></p>
+	  <div id="footer-widget">
+	    <?php
+	    if(is_active_sidebar('footer-widget')){
+	      dynamic_sidebar('footer-widget');
+	      } ?>
+	  </div>
+    <!-- <p>&copy;  <?php// echo date('Y'); ?></p> -->
+    <p>&copy 2015 <a href="www.jamesmcdermid.ca">James McDermid</a> &amp; <a href="http://francislanglois.com">Francis Langlois</a> | All Rights Reserved</p>
   </div>
 </footer>
 

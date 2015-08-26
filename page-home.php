@@ -58,6 +58,7 @@
 	//CONTACT ===================================================
 	$contact_title = get_field('contact_title');
 	$contact_tagline = get_field('contact_tagline');
+	$contact_form = get_field('contact');
 
 // ========================================================
 // END CUSTOM FIELDS
@@ -223,11 +224,9 @@ GALLERY
 				    
 				<?php endif; ?>
 			</div><!--gallery-items-wrapper -->
-			
-			
 		</div><!--gallery-wrapper-->
-
 	</section><!--gallery-->
+
 
 
 
